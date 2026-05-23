@@ -8,6 +8,7 @@ import {
   Flame, Circle
 } from "lucide-react";
 import { SparklesText } from "@/components/ui/sparkles-text";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 /* ─── Spring configs ─── */
 const springBouncy = { type: "spring" as const, stiffness: 300, damping: 15 };
@@ -128,104 +129,97 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* ═══════ HERO ═══════ */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 pt-32 pb-20">
-        <motion.div style={{ y: heroY }} className="relative z-10 text-center max-w-4xl mx-auto">
-          
-          {/* Central mana crystal glow */}
+      {/* ═══════ HERO with Aurora Rainbow Overlay ═══════ */}
+      <section id="hero" className="relative min-h-screen">
+        <AuroraBackground className="min-h-screen bg-[#0D0612]">
+          <motion.div style={{ y: heroY }} className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-32 pb-20">
+            
+            {/* Floating icons */}
+            <motion.div className="absolute -top-8 left-[5%]" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}>
+              <Diamond className="w-8 h-8 text-[#FF2D78] drop-shadow-[0_0_10px_rgba(255,45,120,0.8)]" />
+            </motion.div>
+            <motion.div className="absolute top-[10%] right-[8%]" animate={{ rotate: -360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }}>
+              <Zap className="w-6 h-6 text-[#22D3EE] drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+            </motion.div>
+            <motion.div className="absolute bottom-[20%] left-[10%]" animate={{ y: [0, -15, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              <Star className="w-5 h-5 text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]" />
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0, rotate: -10 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ ...springBouncy, delay: 0.3 }}
+              className="inline-flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8"
+            >
+              <Sparkles className="w-4 h-4 text-[#22D3EE]" />
+              <span className="text-sm font-medium text-[#B8A2D9]">Magical art for magical people</span>
+              <Sparkles className="w-4 h-4 text-[#FF2D78]" />
+            </motion.div>
+
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ...springBouncy, delay: 0.5 }}
+              className="mb-6"
+            >
+              <SparklesText 
+                text="Starry Arts" 
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana drop-shadow-[0_0_40px_rgba(255,45,120,0.3)]"
+                colors={{ first: "#FF2D78", second: "#A855F7" }}
+                sparklesCount={15}
+              />
+            </motion.div>
+
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ...springSoft, delay: 0.7 }}
+              className="text-lg md:text-xl text-[#F0E6FF]/90 max-w-2xl mx-auto mb-10 leading-relaxed"
+            >
+              Queer anime artist channeling galaxy mana into sparkly stickers, prints, and commissions. 
+              Catch me at conventions or order online!
+            </motion.p>
+
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ...springSoft, delay: 0.9 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <motion.button 
+                className="mana-button rounded-full px-8 py-4 text-white font-semibold flex items-center gap-2"
+                whileHover={{ scale: 1.08, transition: springBouncy }}
+                whileTap={{ scale: 0.92 }}
+              >
+                <Palette className="w-5 h-5" />
+                Browse Art
+              </motion.button>
+              <motion.button 
+                className="rounded-full px-8 py-4 font-semibold flex items-center gap-2 border border-[#A855F7]/40 bg-[#0D0612]/40 text-[#F0E6FF] backdrop-blur-sm hover:border-[#FF2D78]/60 hover:bg-[#1A0B2E]/60 transition-all"
+                whileHover={{ scale: 1.05, transition: springBouncy }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Mail className="w-5 h-5 text-[#FF2D78]" />
+                Commission Me
+              </motion.button>
+            </motion.div>
+          </motion.div>
+
+          {/* Scroll indicator */}
           <motion.div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] -z-10"
-            animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 6, repeat: Infinity }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
           >
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-[#FF2D78]/20 via-[#A855F7]/10 to-transparent blur-3xl" />
+            <div className="w-8 h-12 rounded-full border-2 border-[#A855F7]/40 flex items-start justify-center p-2">
+              <motion.div 
+                className="w-1.5 h-3 rounded-full bg-[#FF2D78]"
+                animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </div>
           </motion.div>
-
-          {/* Floating icons */}
-          <motion.div className="absolute -top-8 left-[5%]" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}>
-            <Diamond className="w-8 h-8 text-[#FF2D78] drop-shadow-[0_0_10px_rgba(255,45,120,0.8)]" />
-          </motion.div>
-          <motion.div className="absolute top-[10%] right-[8%]" animate={{ rotate: -360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }}>
-            <Zap className="w-6 h-6 text-[#22D3EE] drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
-          </motion.div>
-          <motion.div className="absolute bottom-[20%] left-[10%]" animate={{ y: [0, -15, 0] }} transition={{ duration: 3, repeat: Infinity }}>
-            <Star className="w-5 h-5 text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]" />
-          </motion.div>
-
-          <motion.div
-            initial={{ scale: 0, rotate: -10 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ ...springBouncy, delay: 0.3 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E]/80 backdrop-blur-sm px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-[#22D3EE]" />
-            <span className="text-sm font-medium text-[#B8A2D9]">Magical art for magical people</span>
-            <Sparkles className="w-4 h-4 text-[#FF2D78]" />
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ ...springBouncy, delay: 0.5 }}
-            className="mb-6"
-          >
-            <SparklesText 
-              text="Starry Arts" 
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana"
-              colors={{ first: "#FF2D78", second: "#A855F7" }}
-              sparklesCount={15}
-            />
-          </motion.div>
-
-          <motion.p
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ ...springSoft, delay: 0.7 }}
-            className="text-lg md:text-xl text-[#B8A2D9] max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Queer anime artist channeling galaxy mana into sparkly stickers, prints, and commissions. 
-            Catch me at conventions or order online!
-          </motion.p>
-
-          <motion.div
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ ...springSoft, delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <motion.button 
-              className="mana-button rounded-full px-8 py-4 text-white font-semibold flex items-center gap-2"
-              whileHover={{ scale: 1.08, transition: springBouncy }}
-              whileTap={{ scale: 0.92 }}
-            >
-              <Palette className="w-5 h-5" />
-              Browse Art
-            </motion.button>
-            <motion.button 
-              className="rounded-full px-8 py-4 font-semibold flex items-center gap-2 border border-[#A855F7]/40 bg-[#1A0B2E]/60 text-[#F0E6FF] backdrop-blur-sm hover:border-[#FF2D78]/60 hover:bg-[#2D1B4E]/60 transition-all"
-              whileHover={{ scale: 1.05, transition: springBouncy }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Mail className="w-5 h-5 text-[#FF2D78]" />
-              Commission Me
-            </motion.button>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-8 h-12 rounded-full border-2 border-[#A855F7]/40 flex items-start justify-center p-2">
-            <motion.div 
-              className="w-1.5 h-3 rounded-full bg-[#FF2D78]"
-              animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
+        </AuroraBackground>
       </section>
 
       {/* ═══════ ABOUT ═══════ */}
