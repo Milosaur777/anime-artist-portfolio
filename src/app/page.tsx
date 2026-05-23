@@ -7,6 +7,7 @@ import {
   MapPin, ShoppingBag, Camera, Wand2, Zap, Diamond,
   Flame, Circle
 } from "lucide-react";
+import { SparklesText } from "@/components/ui/sparkles-text";
 
 /* ─── Spring configs ─── */
 const springBouncy = { type: "spring" as const, stiffness: 300, damping: 15 };
@@ -162,24 +163,19 @@ export default function Home() {
             <Sparkles className="w-4 h-4 text-[#FF2D78]" />
           </motion.div>
 
-          <motion.h1
+          <motion.div
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ...springBouncy, delay: 0.5 }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6"
-            style={{ fontFamily: 'var(--font-fredoka)' }}
+            className="mb-6"
           >
-            <span className="gradient-mana drop-shadow-[0_0_30px_rgba(255,45,120,0.5)]">Starry</span>
-            <br />
-            <span className="text-[#F0E6FF] drop-shadow-[0_0_20px_rgba(168,85,247,0.4)]">Arts</span>
-            <motion.span
-              className="inline-block ml-2"
-              animate={{ rotate: [0, 15, -10, 0], filter: ["brightness(1)", "brightness(1.3)", "brightness(1)"] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-            >
-              ✨
-            </motion.span>
-          </motion.h1>
+            <SparklesText 
+              text="Starry Arts" 
+              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana"
+              colors={{ first: "#FF2D78", second: "#A855F7" }}
+              sparklesCount={15}
+            />
+          </motion.div>
 
           <motion.p
             initial={{ y: 40, opacity: 0 }}
@@ -336,12 +332,12 @@ export default function Home() {
               <Diamond className="w-4 h-4 text-[#FF2D78]" />
               <span className="text-sm font-semibold text-[#B8A2D9]">My Gallery</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'var(--font-fredoka)' }}>
-              Mana Crystals 
-              <motion.span className="inline-block ml-2" animate={{ rotate: [0, 20, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-                💎
-              </motion.span>
-            </h2>
+            <SparklesText 
+              text="Mana Crystals" 
+              className="text-4xl md:text-5xl font-bold gradient-mana"
+              colors={{ first: "#FF2D78", second: "#A855F7" }}
+              sparklesCount={12}
+            />
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -406,12 +402,12 @@ export default function Home() {
               <Calendar className="w-4 h-4 text-[#22D3EE]" />
               <span className="text-sm font-semibold text-[#B8A2D9]">Catch Me At</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'var(--font-fredoka)' }}>
-              Convention Schedule 
-              <motion.span className="inline-block ml-2" animate={{ y: [0, -8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-                📅
-              </motion.span>
-            </h2>
+            <SparklesText 
+              text="Convention Schedule" 
+              className="text-4xl md:text-5xl font-bold gradient-mana"
+              colors={{ first: "#22D3EE", second: "#A855F7" }}
+              sparklesCount={10}
+            />
           </motion.div>
 
           <div className="space-y-6">
