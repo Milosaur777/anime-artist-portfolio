@@ -15,8 +15,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "StarryArts ✨ Kawaii Artist Shop",
-  description: "Magical art, stickers, and prints by StarryArts. Catch me at anime conventions!",
+  title: "StarryArts ✨ Galaxy Mana Edition",
+  description: "Magical art, stickers, and prints by StarryArts. Channeling galaxy mana into every piece!",
 };
 
 export default function RootLayout({
@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fredoka.variable} ${nunito.variable} antialiased`}>
-      <body className="min-h-full bg-[#FFF8FB] text-[#4A2B4D]" style={{ fontFamily: 'var(--font-nunito), sans-serif' }}>
+    <html lang="en" className={`${fredoka.variable} ${nunito.variable} antialiased dark`}>
+      <body className="min-h-full bg-[#0D0612] text-[#F0E6FF]" style={{ fontFamily: 'var(--font-nunito), sans-serif' }}>
         {children}
       </body>
     </html>
