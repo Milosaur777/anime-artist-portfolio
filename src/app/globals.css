@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: #1a0b2e;
+  --color-foreground: #fff0f5;
+  --color-card: #2d1b4e;
+  --color-card-foreground: #fff0f5;
+  --color-popover: #2d1b4e;
+  --color-popover-foreground: #fff0f5;
+  --color-primary: #ff6b9d;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #c77dff;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #4a2b7a;
+  --color-muted-foreground: #d4a5d4;
+  --color-accent: #4deeea;
+  --color-accent-foreground: #1a0b2e;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: rgba(199, 125, 255, 0.2);
+  --color-input: rgba(199, 125, 255, 0.2);
+  --color-ring: #ff6b9d;
+  --color-chart-1: #ff6b9d;
+  --color-chart-2: #c77dff;
+  --color-chart-3: #4deeea;
+  --color-chart-4: #ffd700;
+  --color-chart-5: #e0aaff;
+  --color-sidebar-background: #2d1b4e;
+  --color-sidebar-foreground: #fff0f5;
+  --color-sidebar-primary: #ff6b9d;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #4a2b7a;
+  --color-sidebar-accent-foreground: #fff0f5;
+  --color-sidebar-border: rgba(199, 125, 255, 0.2);
+  --color-sidebar-ring: #ff6b9d;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-rainbow {
+  background-size: 200% 200%;
+  animation: rainbow-shift 4s ease infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c77dff 50%, #4deeea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sparkle-gold { color: #ffd700; }
+.sparkle-pink { color: #ff6b9d; }
+.sparkle-cyan { color: #4deeea; }
