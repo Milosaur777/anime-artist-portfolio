@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
-import { Outfit, Quicksand, Pacifico } from "next/font/google";
+import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const pacifico = Pacifico({
-  variable: "--font-pacifico",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "StarryArts | Anime Convention Artist",
-  description: "Magical art, stickers, and prints by StarryArts. Find me at anime conventions! ✨",
+  title: "StarryArts ✨ Kawaii Artist Shop",
+  description: "Magical art, stickers, and prints by StarryArts. Catch me at anime conventions!",
 };
 
 export default function RootLayout({
@@ -31,11 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} ${quicksand.variable} ${pacifico.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col" style={{ fontFamily: 'var(--font-quicksand), sans-serif' }}>
+    <html lang="en" className={`${fredoka.variable} ${nunito.variable} antialiased`}>
+      <body className="min-h-full bg-[#FFF8FB] text-[#4A2B4D]" style={{ fontFamily: 'var(--font-nunito), sans-serif' }}>
         {children}
       </body>
     </html>
