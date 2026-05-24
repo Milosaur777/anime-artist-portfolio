@@ -17,49 +17,47 @@ export const AuroraBackground = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col min-h-[100vh] items-center justify-center transition-bg overflow-hidden",
+        "relative flex flex-col min-h-[100vh] items-center justify-center bg-[#0D0612] text-slate-950 transition-bg overflow-hidden",
         className
       )}
       {...props}
     >
-      {/* Base aurora layer */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Base layer — static rainbow */}
         <div
           className={cn(
-            "absolute -inset-[10px] opacity-50 will-change-transform",
-            "blur-[10px]",
+            "absolute -inset-[10px] opacity-70 will-change-transform blur-[10px]",
             showRadialGradient && "[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]"
           )}
           style={{
             backgroundImage: `
-              repeating-linear-gradient(100deg, #0D0612 0%, #0D0612 7%, transparent 10%, transparent 12%, #0D0612 16%),
-              repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%)
+              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
+              repeating-linear-gradient(100deg, #FF0080 10%, #FF8C00 15%, #FFD700 20%, #00FF88 25%, #00CCFF 30%, #9D4EDD 35%, #FF0080 40%)
             `,
             backgroundSize: "300%, 200%",
             backgroundPosition: "50% 50%, 50% 50%",
           }}
         />
         
-        {/* Animated aurora overlay */}
+        {/* Animated overlay layer — moving rainbow */}
         <div
           className={cn(
-            "absolute -inset-[10px] opacity-50 will-change-transform animate-aurora",
-            "blur-[10px] mix-blend-difference",
+            "absolute -inset-[10px] opacity-60 will-change-transform blur-[10px] animate-aurora",
             showRadialGradient && "[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]"
           )}
           style={{
             backgroundImage: `
-              repeating-linear-gradient(100deg, #0D0612 0%, #0D0612 7%, transparent 10%, transparent 12%, #0D0612 16%),
-              repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%)
+              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
+              repeating-linear-gradient(100deg, #FF006E 10%, #FB5607 20%, #FFBE0B 30%, #8338EC 40%, #3A86FF 50%, #06FFB4 60%, #FF006E 70%)
             `,
             backgroundSize: "200%, 100%",
             backgroundPosition: "50% 50%, 50% 50%",
             backgroundAttachment: "fixed",
+            mixBlendMode: "difference",
           }}
         />
       </div>
       
-      {/* Content */}
       <div className="relative z-10 w-full">
         {children}
       </div>
