@@ -27,7 +27,7 @@ export function RotatingPrompt() {
   }, []);
 
   return (
-    <div className="relative h-6 flex items-center justify-center overflow-hidden w-[220px] sm:w-[260px] md:w-[280px]">
+    <div className="relative h-6 flex items-center justify-center overflow-hidden w-[180px] sm:w-[220px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}

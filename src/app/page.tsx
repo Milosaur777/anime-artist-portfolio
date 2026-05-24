@@ -102,7 +102,7 @@ export default function Home() {
         <div className="flex items-center gap-2 rounded-full bg-[#0D0612]/80 backdrop-blur-xl px-3 py-2 border border-[#A855F7]/30 glow-purple">
           <a href="#hero" className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-[#1A0B2E] transition-colors">
             <Flame className="w-4 h-4 text-[#FF2D78]" />
-            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>Artcorner</span>
+            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>Top</span>
           </a>
           <div className="hidden sm:flex items-center gap-1">
             {[
