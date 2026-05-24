@@ -119,7 +119,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong>{text}</strong>
+        <strong className="relative z-10 inline-block drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">{text}</strong>
       </span>
     </div>
   );
@@ -129,10 +129,10 @@ const Sparkle: React.FC<Sparkle> = ({ id, x, y, color, delay, scale }) => {
   return (
     <motion.svg
       key={id}
-      className="pointer-events-none absolute z-20"
+      className="pointer-events-none absolute z-0"
       initial={{ opacity: 0, left: x, top: y }}
       animate={{
-        opacity: [0, 1, 0],
+        opacity: [0, 0.8, 0],
         scale: [0, scale, 0],
         rotate: [75, 120, 150],
       }}

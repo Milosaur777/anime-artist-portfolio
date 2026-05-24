@@ -146,10 +146,17 @@
 
 /* ─── Gradient Text ─── */
 .gradient-mana {
-  background: linear-gradient(135deg, #FF2D78 0%, #E91E8C 25%, #A855F7 50%, #6366F1 75%, #22D3EE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FF2D78; /* Fallback for browsers that don't support background-clip: text */
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .gradient-mana {
+    background: linear-gradient(135deg, #FF2D78 0%, #E91E8C 25%, #A855F7 50%, #6366F1 75%, #22D3EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Only make text transparent if gradient IS supported */
+  }
 }
 
 /* ─── Energy Card ─── */
