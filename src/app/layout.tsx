@@ -15,8 +15,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "StarryArts ✨ Galaxy Mana Edition",
-  description: "Magical art, stickers, and prints by StarryArts. Channeling galaxy mana into every piece!",
+  title: "Neo & Milo's Artcorner ✨ Galaxy Mana Edition",
+  description: "Artist duo channeling galaxy mana into sparkly stickers, prints, and commissions. Catch us at conventions!",
 };
 
 export default function RootLayout({

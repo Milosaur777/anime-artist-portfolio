@@ -6,13 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const cutePrompts = [
   "Magical art for magical people ✨",
   "Made with stardust and love 💖",
-  "Cute art for cuties only 🌸",
+  "Two artists, one galaxy 🌌",
   "Channeling galaxy mana into pixels 🔮",
   "Stickers, prints, and sparkles! 🎨",
   "Queer joy in every brushstroke 🏳️‍🌈",
   "Your OC deserves to shine ✨",
   "Con-ready since 2020 🎪",
-  "Small artist, big dreams 💫",
+  "Small duo, big dreams 💫",
   "Glitter is a lifestyle ✨",
 ];
 

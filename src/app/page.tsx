@@ -102,7 +102,7 @@ export default function Home() {
         <div className="flex items-center gap-2 rounded-full bg-[#0D0612]/80 backdrop-blur-xl px-3 py-2 border border-[#A855F7]/30 glow-purple">
           <a href="#hero" className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-[#1A0B2E] transition-colors">
             <Flame className="w-4 h-4 text-[#FF2D78]" />
-            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>StarryArts</span>
+            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>Artcorner</span>
           </a>
           <div className="hidden sm:flex items-center gap-1">
             {[
@@ -164,7 +164,7 @@ export default function Home() {
               className="mb-6"
             >
               <SparklesText 
-                text="Starry Arts" 
+                text="Neo & Milo" 
                 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana drop-shadow-[0_0_40px_rgba(255,45,120,0.3)]"
                 colors={{ first: "#FF2D78", second: "#A855F7" }}
                 sparklesCount={15}
@@ -177,8 +177,8 @@ export default function Home() {
               transition={{ ...springSoft, delay: 0.7 }}
               className="text-lg md:text-xl text-[#F0E6FF]/90 max-w-2xl mx-auto mb-10 leading-relaxed"
             >
-              Queer anime artist channeling galaxy mana into sparkly stickers, prints, and commissions. 
-              Catch me at conventions or order online!
+              Artist duo channeling galaxy mana into sparkly stickers, prints, and commissions. 
+              Catch us at conventions or order online!
             </motion.p>
 
             <motion.div
@@ -238,7 +238,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-[#B8A2D9]">About Me</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
-              Hi, I'm <span className="gradient-mana">Starry</span>! 
+              Hi, we're <span className="gradient-mana">Neo & Milo</span>! 
               <motion.span className="inline-block ml-2" animate={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 3, repeat: Infinity }}>
                 🌸
               </motion.span>
@@ -281,12 +281,12 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
-                I'm a queer digital artist who channels galaxy mana into magical, sparkly art. 
-                My work celebrates anime culture, LGBTQ+ pride, and the joy of being unapologetically yourself.
+              We're an artist duo who channels galaxy mana into magical, sparkly art. 
+              Our work celebrates anime culture, LGBTQ+ pride, and the joy of being unapologetically yourself.
               </p>
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
-                You'll find me at anime conventions across the country, selling stickers, prints, and taking commissions. 
-                Every piece is infused with arcane energy and a touch of stardust!
+              You'll find us at anime conventions across the country, selling stickers, prints, and taking commissions. 
+              Every piece is infused with arcane energy and a touch of stardust!
               </p>
               
               <div className="flex flex-wrap gap-3 pt-4">
@@ -518,7 +518,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <motion.div className="text-center md:text-left" whileHover={{ scale: 1.05 }} transition={springBouncy}>
               <h3 className="text-2xl font-bold gradient-mana" style={{ fontFamily: 'var(--font-fredoka)' }}>
-                StarryArts
+                Neo & Milo
               </h3>
               <p className="text-sm text-[#7A6B99] mt-1 flex items-center gap-1 justify-center md:justify-start">
                 Made with <Heart className="w-4 h-4 text-[#FF2D78] inline drop-shadow-[0_0_5px_rgba(255,45,120,0.6)]" /> and galaxy mana
@@ -548,7 +548,7 @@ export default function Home() {
 
           <div className="mt-8 pt-8 border-t border-dashed border-[#A855F7]/20 text-center">
             <p className="text-sm text-[#7A6B99]">
-              © 2026 StarryArts. All rights reserved. 🏳️‍🌈
+              © 2026 Neo & Milo's Artcorner. All rights reserved. 🏳️‍🌈
             </p>
           </div>
         </div>
