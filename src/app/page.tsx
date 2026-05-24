@@ -165,7 +165,7 @@ export default function Home() {
               className="mb-6"
             >
               <SparklesText 
-                text="Neo & Milo" 
+                text="Neo" 
                 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana drop-shadow-[0_0_40px_rgba(255,45,120,0.3)]"
                 colors={{ first: "#FF2D78", second: "#A855F7" }}
                 sparklesCount={15}
@@ -178,7 +178,7 @@ export default function Home() {
               transition={{ ...springSoft, delay: 0.7 }}
               className="text-lg md:text-xl text-[#F0E6FF]/90 max-w-2xl mx-auto mb-10 leading-relaxed"
             >
-              Artist duo channeling love into sparkly stickers, prints, and commissions. 
+              Channeling love into sparkly stickers, prints, and commissions. 
               Catch us at conventions or order online!
             </motion.p>
 
@@ -236,10 +236,10 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#A855F7]/30 mb-6">
               <Heart className="w-4 h-4 text-[#FF2D78]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">About Us</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">About Me</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
-              Hi, we're <span className="gradient-mana">Neo & Milo</span>!
+              Hi, I'm <span className="gradient-mana">Neo</span>!
             </h2>
           </motion.div>
 
@@ -279,11 +279,11 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
-              We're an artist duo who channels love into magical, sparkly art. 
-              Our work celebrates anime culture, LGBTQ+ pride, and the joy of being unapologetically yourself.
+              I'm an artist who channels love into magical, sparkly art. 
+              My work celebrates LGBTQ+ pride, anime culture, and the joy of being unapologetically yourself.
               </p>
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
-              You'll find us at anime conventions across the country, selling stickers, prints, and taking commissions. 
+              You'll find me at anime conventions across the country, selling stickers, prints, and taking commissions. 
               Every piece is infused with arcane energy and a touch of stardust!
               </p>
               
@@ -323,10 +323,10 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#FF2D78]/30 glow-magenta mb-6">
               <Diamond className="w-4 h-4 text-[#FF2D78]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">Our Gallery</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">My Gallery</span>
             </div>
             <SparklesText 
-              text="Mana Crystals" 
+              text="Fandoms" 
               className="text-4xl md:text-5xl font-bold gradient-mana"
               colors={{ first: "#FF2D78", second: "#A855F7" }}
               sparklesCount={12}
@@ -381,7 +381,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ SHOP (Mana Wares) ═══════ */}
+      {/* ═══════ ORIGINALS ═══════ */}
+      <section id="originals" className="relative py-24 md:py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={springSoft}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#FFD700]/30 glow-gold mb-6">
+              <Star className="w-4 h-4 text-[#FFD700]" />
+              <span className="text-sm font-semibold text-[#B8A2D9]">Original Works</span>
+            </div>
+            <SparklesText 
+              text="Originals" 
+              className="text-4xl md:text-5xl font-bold gradient-mana"
+              colors={{ first: "#FFD700", second: "#A855F7" }}
+              sparklesCount={12}
+            />
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "Ethereal Bloom", category: "Original Character", color: "#FF2D78", icon: Heart },
+              { title: "Midnight Garden", category: "Concept Art", color: "#A855F7", icon: Sparkles },
+              { title: "Star Weaver", category: "Original Character", color: "#22D3EE", icon: Star },
+              { title: "Neon Dreams", category: "Illustration", color: "#E91E8C", icon: Diamond },
+              { title: "Crystal Heart", category: "Original Character", color: "#6366F1", icon: Flame },
+              { title: "Aurora Soul", category: "Concept Art", color: "#FFD700", icon: Zap },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ ...springSoft, delay: i * 0.1 }}
+              >
+                <motion.div 
+                  className="energy-card rounded-3xl p-4 cursor-pointer group"
+                  whileHover={{ scale: 1.05, rotate: i % 2 === 0 ? -1 : 1, transition: springBouncy }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="relative">
+                    <div 
+                      className="rounded-[2rem] aspect-[4/5] flex items-center justify-center transition-all group-hover:brightness-125 relative overflow-hidden"
+                      style={{ backgroundColor: item.color + '15' }}
+                    >
+                      {/* Inner glow */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full blur-3xl opacity-50" style={{ backgroundColor: item.color }} />
+                      
+                      <motion.div whileHover={{ rotate: 15, scale: 1.15 }} transition={springBouncy}>
+                        <item.icon className="w-16 h-16 relative z-10" style={{ color: item.color, filter: `drop-shadow(0 0 10px ${item.color})` }} />
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  <div className="pt-5 px-2">
+                    <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-[#B8A2D9] mt-1">{item.category}</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SHOP (My Wares) ═══════ */}
       <section id="shop" className="relative py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -396,14 +466,13 @@ export default function Home() {
               <span className="text-sm font-semibold text-[#B8A2D9]">Shop</span>
             </div>
             <SparklesText 
-              text="Mana Wares" 
+              text="My Wares" 
               className="text-4xl md:text-5xl font-bold gradient-mana"
               colors={{ first: "#FFD700", second: "#FF2D78" }}
               sparklesCount={12}
             />
             <p className="text-lg text-[#B8A2D9] mt-4 max-w-xl mx-auto">
-              Stickers, prints, and commissions infused with galaxy mana. 
-              Order online or catch us at conventions!
+              Stickers and prints. Order online or catch me at conventions for better deals!
             </p>
           </motion.div>
 
@@ -420,18 +489,10 @@ export default function Home() {
               { 
                 title: "Art Print: Pride Nova", 
                 price: "$25", 
-                desc: "A3 matte print on 300gsm archival paper. Signed by Neo & Milo.",
+                desc: "A3 matte print on 300gsm archival paper. Signed by Neo.",
                 color: "#A855F7",
                 icon: Sparkles,
                 badge: "New"
-              },
-              { 
-                title: "Commission: Custom OC", 
-                price: "$80+", 
-                desc: "Full-color digital illustration of your original character. Includes commercial rights.",
-                color: "#22D3EE",
-                icon: Wand2,
-                badge: "Open"
               },
               { 
                 title: "Sticker Pack: Chibi Friends", 
@@ -450,9 +511,17 @@ export default function Home() {
                 badge: "Limited"
               },
               { 
-                title: "Commission: Couple Portrait", 
-                price: "$120+", 
-                desc: "Romantic couple illustration in anime style. Perfect for anniversaries or gifts.",
+                title: "Sticker Pack: Magical Girls", 
+                price: "$14", 
+                desc: "6 sparkly stickers featuring magical girl designs and transformation scenes.",
+                color: "#22D3EE",
+                icon: Wand2,
+                badge: "New"
+              },
+              { 
+                title: "Art Print: Starlight Dance", 
+                price: "$28", 
+                desc: "A3 print on metallic paper. Dancing figures under a galaxy sky with holographic details.",
                 color: "#FFD700",
                 icon: Flame,
                 badge: "Popular"
@@ -647,11 +716,11 @@ export default function Home() {
               </motion.div>
 
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
-                Channel Your <span className="gradient-mana">Mana</span>!
+                Reach Out To <span className="gradient-mana">Me</span>!
               </h2>
               
               <p className="text-lg text-[#B8A2D9] mb-8 max-w-xl mx-auto leading-relaxed">
-                Open for commissions, collaborations, and custom orders. 
+                Open for collaborations. 
                 Let's create something that glows!
               </p>
 
@@ -679,7 +748,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <motion.div className="text-center md:text-left" whileHover={{ scale: 1.05 }} transition={springBouncy}>
               <h3 className="text-2xl font-bold gradient-mana" style={{ fontFamily: 'var(--font-fredoka)' }}>
-                Neo & Milo
+                Neos Art Corner
               </h3>
               <p className="text-sm text-[#7A6B99] mt-1 flex items-center gap-1 justify-center md:justify-start">
                 Made with <Heart className="w-4 h-4 text-[#FF2D78] inline drop-shadow-[0_0_5px_rgba(255,45,120,0.6)]" />
@@ -709,7 +778,7 @@ export default function Home() {
 
           <div className="mt-8 pt-8 border-t border-dashed border-[#A855F7]/20 text-center">
             <p className="text-sm text-[#7A6B99]">
-              © 2026 Neo & Milo's Artcorner. All rights reserved. 🏳️‍🌈
+              © 2026 Neos Art Corner. All rights reserved. 🏳️‍🌈
             </p>
           </div>
         </div>
