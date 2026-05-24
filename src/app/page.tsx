@@ -69,7 +69,7 @@ export default function Home() {
     Array.from({ length: 40 }, (_, i) => ({
       id: i,
       delay: Math.random() * 10,
-      color: ["#FF2D78", "#A855F7", "#22D3EE", "#E91E8C", "#E91E8C", "#E91E8C"][Math.floor(Math.random() * 6)],
+      color: ["#FF2D78", "#A855F7", "#E91E8C", "#E91E8C", "#E91E8C", "#E91E8C"][Math.floor(Math.random() * 6)],
       size: 2 + Math.random() * 6,
       left: `${Math.random() * 100}%`
     }))
@@ -207,8 +207,8 @@ export default function Home() {
 
           {/* Scroll indicator */}
           <motion.div 
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8"
-            animate={{ y: [8, 18, 8] }}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <div className="w-8 h-12 rounded-full border-2 border-[#A855F7]/40 flex items-start justify-center p-2">
@@ -528,7 +528,7 @@ export default function Home() {
               {[
                 { icon: Camera, color: "#A855F7", label: "Instagram" },
                 { icon: Mail, color: "#FF2D78", label: "Email" },
-                { icon: ShoppingBag, color: "#22D3EE", label: "Shop" },
+                { icon: ShoppingBag, color: "#A855F7", label: "Shop" },
               ].map((social) => (
                 <motion.a
                   key={social.label}
