@@ -235,7 +235,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#A855F7]/30 mb-6">
               <Heart className="w-4 h-4 text-[#FF2D78]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">About Me</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">About Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
               Hi, we're <span className="gradient-mana">Neo & Milo</span>!
