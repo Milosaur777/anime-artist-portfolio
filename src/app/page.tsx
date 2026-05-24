@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { RotatingPrompt } from "@/components/ui/rotating-prompt";
 
 /* ─── Spring configs ─── */
 const springBouncy = { type: "spring" as const, stiffness: 300, damping: 15 };
@@ -145,16 +146,16 @@ export default function Home() {
               <Star className="w-5 h-5 text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]" />
             </motion.div>
 
-            <motion.div
-              initial={{ scale: 0, rotate: -10 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ ...springBouncy, delay: 0.3 }}
-              className="inline-flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8"
-            >
-              <Sparkles className="w-4 h-4 text-[#22D3EE]" />
-              <span className="text-sm font-medium text-[#B8A2D9]">Magical art for magical people</span>
-              <Sparkles className="w-4 h-4 text-[#FF2D78]" />
-            </motion.div>
+          <motion.div
+            initial={{ scale: 0, rotate: -10 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ ...springBouncy, delay: 0.3 }}
+            className="inline-flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8"
+          >
+            <Sparkles className="w-4 h-4 text-[#FF2D78] shrink-0" />
+            <RotatingPrompt />
+            <Sparkles className="w-4 h-4 text-[#A855F7] shrink-0" />
+          </motion.div>
 
             <motion.div
               initial={{ y: 60, opacity: 0 }}
