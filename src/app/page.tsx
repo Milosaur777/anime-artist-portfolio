@@ -151,7 +151,7 @@ export default function Home() {
             initial={{ scale: 0, rotate: -10 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ ...springBouncy, delay: 0.3 }}
-            className="flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-4 sm:px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8 max-w-full mx-auto justify-center"
+            className="inline-flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-4 sm:px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8 max-w-[90vw]"
           >
             <Sparkles className="w-4 h-4 text-[#FF2D78] shrink-0" />
             <RotatingPrompt />
