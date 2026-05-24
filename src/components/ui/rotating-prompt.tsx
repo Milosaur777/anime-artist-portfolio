@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const cutePrompts = [
   "Magical art for magical people ✨",
   "Made with stardust and love 💖",
-  "Channeling galaxy mana into pixels 🔮",
   "Stickers, prints, and sparkles! 🎨",
   "Queer joy in every brushstroke 🏳️‍🌈",
   "Your OC deserves to shine ✨",
@@ -28,7 +27,7 @@ export function RotatingPrompt() {
   }, []);
 
   return (
-    <div className="relative h-6 flex items-center justify-center overflow-hidden w-[300px]">
+    <div className="relative h-6 flex items-center justify-center overflow-hidden w-[220px] sm:w-[260px] md:w-[280px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
@@ -36,7 +35,7 @@ export function RotatingPrompt() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="text-sm font-medium text-[#B8A2D9] whitespace-nowrap absolute"
+          className="text-xs sm:text-sm font-medium text-[#B8A2D9] whitespace-nowrap absolute"
         >
           {cutePrompts[index]}
         </motion.span>

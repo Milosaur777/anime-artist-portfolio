@@ -151,7 +151,7 @@ export default function Home() {
             initial={{ scale: 0, rotate: -10 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ ...springBouncy, delay: 0.3 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8"
+            className="flex items-center gap-2 rounded-full bg-[#0D0612]/60 backdrop-blur-sm px-4 sm:px-5 py-2.5 border border-[#A855F7]/40 glow-purple mb-8 max-w-full mx-auto justify-center"
           >
             <Sparkles className="w-4 h-4 text-[#FF2D78] shrink-0" />
             <RotatingPrompt />
@@ -625,10 +625,10 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#22D3EE]/30 glow-cyan mb-6">
               <Calendar className="w-4 h-4 text-[#22D3EE]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">Catch Us At</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">Catch Me At</span>
             </div>
             <SparklesText 
-              text="Convention Schedule" 
+              text="Con Schedule" 
               className="text-4xl md:text-5xl font-bold gradient-mana"
               colors={{ first: "#22D3EE", second: "#A855F7" }}
               sparklesCount={10}
