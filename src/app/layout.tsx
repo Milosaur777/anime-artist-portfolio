@@ -6,12 +6,16 @@ const fredoka = Fredoka({
   variable: "--font-fredoka",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +30,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fredoka.variable} ${nunito.variable} antialiased dark`}>
-      <body className="min-h-full bg-[#0D0612] text-[#F0E6FF]" style={{ fontFamily: 'var(--font-nunito), sans-serif' }}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
+      <body 
+        className="min-h-full bg-[#0D0612] text-[#F0E6FF]" 
+        style={{ fontFamily: 'Fredoka, Nunito, var(--font-nunito), system-ui, sans-serif' }}
+      >
         {children}
       </body>
     </html>

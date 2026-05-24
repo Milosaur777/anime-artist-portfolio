@@ -102,7 +102,7 @@ export default function Home() {
         <div className="flex items-center gap-2 rounded-full bg-[#0D0612]/80 backdrop-blur-xl px-3 py-2 border border-[#A855F7]/30 glow-purple">
           <a href="#hero" className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-[#1A0B2E] transition-colors">
             <Flame className="w-4 h-4 text-[#FF2D78]" />
-            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>Artcorner</span>
+            <span className="font-semibold text-sm text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>Artcorner</span>
           </a>
           <div className="hidden sm:flex items-center gap-1">
             {[
@@ -165,8 +165,8 @@ export default function Home() {
               className="mb-6"
             >
               <SparklesText 
-                text="Neo" 
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight gradient-mana drop-shadow-[0_0_40px_rgba(255,45,120,0.3)]"
+                text="Neo's Art Corner" 
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tight gradient-mana drop-shadow-[0_0_40px_rgba(255,45,120,0.3)]"
                 colors={{ first: "#FF2D78", second: "#A855F7" }}
                 sparklesCount={15}
               />
@@ -238,7 +238,7 @@ export default function Home() {
               <Heart className="w-4 h-4 text-[#FF2D78]" />
               <span className="text-sm font-semibold text-[#B8A2D9]">About Me</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
               Hi, I'm <span className="gradient-mana">Neo</span>!
             </h2>
           </motion.div>
@@ -369,7 +369,7 @@ export default function Home() {
                   </div>
 
                   <div className="pt-5 px-2">
-                    <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                    <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                       {item.title}
                     </h3>
                     <p className="text-sm text-[#B8A2D9] mt-1">{item.category}</p>
@@ -439,7 +439,7 @@ export default function Home() {
                   </div>
 
                   <div className="pt-5 px-2">
-                    <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                    <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                       {item.title}
                     </h3>
                     <p className="text-sm text-[#B8A2D9] mt-1">{item.category}</p>
@@ -575,7 +575,7 @@ export default function Home() {
                   {/* Product info */}
                   <div className="flex-1 flex flex-col">
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                      <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                         {product.title}
                       </h3>
                       <span className="text-lg font-bold shrink-0" style={{ color: product.color, textShadow: `0 0 10px ${product.color}40` }}>
@@ -661,7 +661,7 @@ export default function Home() {
                         <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: con.color + '20' }}>
                           <MapPin className="w-5 h-5" style={{ color: con.color, filter: `drop-shadow(0 0 5px ${con.color})` }} />
                         </div>
-                        <h3 className="text-xl font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                        <h3 className="text-xl font-bold text-[#F0E6FF]" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                           {con.name}
                         </h3>
                       </div>
@@ -715,7 +715,7 @@ export default function Home() {
                 <Sparkles className="w-12 h-12 text-[#FFD700] drop-shadow-[0_0_15px_rgba(255,215,0,0.8)]" />
               </motion.div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                 Reach Out To <span className="gradient-mana">Me</span>!
               </h2>
               
@@ -747,7 +747,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <motion.div className="text-center md:text-left" whileHover={{ scale: 1.05 }} transition={springBouncy}>
-              <h3 className="text-2xl font-bold gradient-mana" style={{ fontFamily: 'var(--font-fredoka)' }}>
+              <h3 className="text-2xl font-bold gradient-mana" style={{ fontFamily: `var(--font-fredoka), 'Fredoka', system-ui, sans-serif` }}>
                 Neos Art Corner
               </h3>
               <p className="text-sm text-[#7A6B99] mt-1 flex items-center gap-1 justify-center md:justify-start">

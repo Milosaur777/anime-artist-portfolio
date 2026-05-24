@@ -6,14 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const cutePrompts = [
   "Magical art for magical people ✨",
   "Made with stardust and love 💖",
-  "Two artists, one galaxy 🌌",
   "Channeling galaxy mana into pixels 🔮",
   "Stickers, prints, and sparkles! 🎨",
   "Queer joy in every brushstroke 🏳️‍🌈",
   "Your OC deserves to shine ✨",
   "Con-ready since 2020 🎪",
-  "Small duo, big dreams 💫",
+  "One artist, infinite galaxies 💫",
   "Glitter is a lifestyle ✨",
+  "Pride art with sparkle power 🌈",
 ];
 
 export function RotatingPrompt() {
