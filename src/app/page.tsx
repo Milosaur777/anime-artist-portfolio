@@ -177,7 +177,7 @@ export default function Home() {
               transition={{ ...springSoft, delay: 0.7 }}
               className="text-lg md:text-xl text-[#F0E6FF]/90 max-w-2xl mx-auto mb-10 leading-relaxed"
             >
-              Artist duo channeling galaxy mana into sparkly stickers, prints, and commissions. 
+              Artist duo channeling love into sparkly stickers, prints, and commissions. 
               Catch us at conventions or order online!
             </motion.p>
 
@@ -238,10 +238,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-[#B8A2D9]">About Me</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-fredoka)' }}>
-              Hi, we're <span className="gradient-mana">Neo & Milo</span>! 
-              <motion.span className="inline-block ml-2" animate={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 3, repeat: Infinity }}>
-                🌸
-              </motion.span>
+              Hi, we're <span className="gradient-mana">Neo & Milo</span>!
             </h2>
           </motion.div>
 
@@ -281,7 +278,7 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
-              We're an artist duo who channels galaxy mana into magical, sparkly art. 
+              We're an artist duo who channels love into magical, sparkly art. 
               Our work celebrates anime culture, LGBTQ+ pride, and the joy of being unapologetically yourself.
               </p>
               <p className="text-lg text-[#B8A2D9] leading-relaxed">
@@ -325,7 +322,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#FF2D78]/30 glow-magenta mb-6">
               <Diamond className="w-4 h-4 text-[#FF2D78]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">My Gallery</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">Our Gallery</span>
             </div>
             <SparklesText 
               text="Mana Crystals" 
@@ -395,7 +392,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#22D3EE]/30 glow-cyan mb-6">
               <Calendar className="w-4 h-4 text-[#22D3EE]" />
-              <span className="text-sm font-semibold text-[#B8A2D9]">Catch Me At</span>
+              <span className="text-sm font-semibold text-[#B8A2D9]">Catch Us At</span>
             </div>
             <SparklesText 
               text="Convention Schedule" 
@@ -521,7 +518,7 @@ export default function Home() {
                 Neo & Milo
               </h3>
               <p className="text-sm text-[#7A6B99] mt-1 flex items-center gap-1 justify-center md:justify-start">
-                Made with <Heart className="w-4 h-4 text-[#FF2D78] inline drop-shadow-[0_0_5px_rgba(255,45,120,0.6)]" /> and galaxy mana
+                Made with <Heart className="w-4 h-4 text-[#FF2D78] inline drop-shadow-[0_0_5px_rgba(255,45,120,0.6)]" />
               </p>
             </motion.div>
 

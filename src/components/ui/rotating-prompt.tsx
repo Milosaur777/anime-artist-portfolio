@@ -28,7 +28,7 @@ export function RotatingPrompt() {
   }, []);
 
   return (
-    <div className="relative h-6 flex items-center justify-center overflow-hidden">
+    <div className="relative h-6 flex items-center justify-center overflow-hidden w-[300px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
@@ -36,7 +36,7 @@ export function RotatingPrompt() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="text-sm font-medium text-[#B8A2D9] whitespace-nowrap"
+          className="text-sm font-medium text-[#B8A2D9] whitespace-nowrap absolute"
         >
           {cutePrompts[index]}
         </motion.span>
