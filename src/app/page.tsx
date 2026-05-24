@@ -108,6 +108,7 @@ export default function Home() {
             {[
               { label: "About", href: "#about" },
               { label: "Gallery", href: "#gallery" },
+              { label: "Shop", href: "#shop" },
               { label: "Events", href: "#events" },
               { label: "Contact", href: "#contact" },
             ].map((item) => (
@@ -372,6 +373,169 @@ export default function Home() {
                       {item.title}
                     </h3>
                     <p className="text-sm text-[#B8A2D9] mt-1">{item.category}</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SHOP (Mana Wares) ═══════ */}
+      <section id="shop" className="relative py-24 md:py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={springSoft}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#1A0B2E] px-4 py-2 border border-[#FFD700]/30 glow-gold mb-6">
+              <ShoppingBag className="w-4 h-4 text-[#FFD700]" />
+              <span className="text-sm font-semibold text-[#B8A2D9]">Shop</span>
+            </div>
+            <SparklesText 
+              text="Mana Wares" 
+              className="text-4xl md:text-5xl font-bold gradient-mana"
+              colors={{ first: "#FFD700", second: "#FF2D78" }}
+              sparklesCount={12}
+            />
+            <p className="text-lg text-[#B8A2D9] mt-4 max-w-xl mx-auto">
+              Stickers, prints, and commissions infused with galaxy mana. 
+              Order online or catch us at conventions!
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "Sticker Pack: Galaxy Set", 
+                price: "$15", 
+                desc: "6 holographic stickers. Chibi characters, pride flags, and sparkle motifs.",
+                color: "#FF2D78",
+                icon: Star,
+                badge: "Bestseller"
+              },
+              { 
+                title: "Art Print: Pride Nova", 
+                price: "$25", 
+                desc: "A3 matte print on 300gsm archival paper. Signed by Neo & Milo.",
+                color: "#A855F7",
+                icon: Sparkles,
+                badge: "New"
+              },
+              { 
+                title: "Commission: Custom OC", 
+                price: "$80+", 
+                desc: "Full-color digital illustration of your original character. Includes commercial rights.",
+                color: "#22D3EE",
+                icon: Wand2,
+                badge: "Open"
+              },
+              { 
+                title: "Sticker Pack: Chibi Friends", 
+                price: "$12", 
+                desc: "5 cute chibi stickers. Perfect for laptops, water bottles, and sketchbooks.",
+                color: "#E91E8C",
+                icon: Heart,
+                badge: null
+              },
+              { 
+                title: "Art Print: Arcane Lands", 
+                price: "$30", 
+                desc: "A2 poster print. Fantasy landscape with magical creatures and glowing flora.",
+                color: "#6366F1",
+                icon: Diamond,
+                badge: "Limited"
+              },
+              { 
+                title: "Commission: Couple Portrait", 
+                price: "$120+", 
+                desc: "Romantic couple illustration in anime style. Perfect for anniversaries or gifts.",
+                color: "#FFD700",
+                icon: Flame,
+                badge: "Popular"
+              },
+            ].map((product, i) => (
+              <motion.div
+                key={product.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ ...springSoft, delay: i * 0.1 }}
+              >
+                <motion.div 
+                  className="energy-card rounded-3xl p-5 cursor-pointer group h-full flex flex-col"
+                  whileHover={{ scale: 1.03, y: -5, transition: springBouncy }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {/* Product image placeholder */}
+                  <div className="relative mb-4">
+                    <div 
+                      className="rounded-[2rem] aspect-[4/3] flex items-center justify-center relative overflow-hidden"
+                      style={{ backgroundColor: product.color + '15' }}
+                    >
+                      {/* Inner glow */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full blur-3xl opacity-40" style={{ backgroundColor: product.color }} />
+                      
+                      <motion.div 
+                        whileHover={{ rotate: 10, scale: 1.1 }} 
+                        transition={springBouncy}
+                      >
+                        <product.icon className="w-20 h-20 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]" style={{ color: product.color }} />
+                      </motion.div>
+
+                      {/* Badge */}
+                      {product.badge && (
+                        <div 
+                          className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold"
+                          style={{ 
+                            backgroundColor: product.color + '30', 
+                            color: product.color,
+                            border: `1px solid ${product.color}60`,
+                            textShadow: `0 0 10px ${product.color}60`
+                          }}
+                        >
+                          {product.badge}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Product info */}
+                  <div className="flex-1 flex flex-col">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="text-lg font-bold text-[#F0E6FF]" style={{ fontFamily: 'var(--font-fredoka)' }}>
+                        {product.title}
+                      </h3>
+                      <span className="text-lg font-bold shrink-0" style={{ color: product.color, textShadow: `0 0 10px ${product.color}40` }}>
+                        {product.price}
+                      </span>
+                    </div>
+                    <p className="text-sm text-[#B8A2D9] leading-relaxed flex-1">
+                      {product.desc}
+                    </p>
+                    
+                    {/* Order button */}
+                    <motion.a
+                      href="#contact"
+                      className="mt-4 w-full py-3 rounded-xl text-sm font-semibold text-center flex items-center justify-center gap-2 transition-all"
+                      style={{ 
+                        backgroundColor: product.color + '20',
+                        border: `1px solid ${product.color}40`,
+                        color: product.color
+                      }}
+                      whileHover={{ 
+                        backgroundColor: product.color + '35',
+                        scale: 1.02,
+                        transition: springBouncy
+                      }}
+                      whileTap={{ scale: 0.96 }}
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                      Order Now
+                    </motion.a>
                   </div>
                 </motion.div>
               </motion.div>
