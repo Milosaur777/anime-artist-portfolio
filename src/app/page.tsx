@@ -66,10 +66,10 @@ export default function Home() {
   const { scrollYProgress } = useScroll({ target: containerRef });
   const heroY = useTransform(scrollYProgress, [0, 0.2], [0, -80]);
   const [particles] = useState(() => 
-    Array.from({ length: 20 }, (_, i) => ({
+    Array.from({ length: 40 }, (_, i) => ({
       id: i,
       delay: Math.random() * 10,
-      color: ["#FF2D78", "#A855F7", "#22D3EE", "#FFD700", "#E91E8C"][Math.floor(Math.random() * 5)],
+      color: ["#FF2D78", "#A855F7", "#22D3EE", "#E91E8C", "#E91E8C", "#E91E8C"][Math.floor(Math.random() * 6)],
       size: 2 + Math.random() * 6,
       left: `${Math.random() * 100}%`
     }))
@@ -207,8 +207,8 @@ export default function Home() {
 
           {/* Scroll indicator */}
           <motion.div 
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8"
+            animate={{ y: [8, 18, 8] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <div className="w-8 h-12 rounded-full border-2 border-[#A855F7]/40 flex items-start justify-center p-2">
@@ -408,7 +408,7 @@ export default function Home() {
             {[
               { name: "Anime Expo", date: "July 4-7, 2026", location: "Los Angeles, CA", booth: "A-42", color: "#FF2D78" },
               { name: "Sakura-Con", date: "April 18-20, 2026", location: "Seattle, WA", booth: "B-15", color: "#A855F7" },
-              { name: "Otakon", date: "August 1-3, 2026", location: "Washington, DC", booth: "C-08", color: "#22D3EE" },
+              { name: "Otakon", date: "August 1-3, 2026", location: "Washington, DC", booth: "C-08", color: "#FF2D78" },
             ].map((con, i) => (
               <motion.div
                 key={con.name}
