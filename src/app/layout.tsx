@@ -19,7 +19,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Neos Art Corner ✨ Galaxy Mana Edition",
+  title: "Neos Art Corner",
   description: "Channeling love into sparkly stickers, prints, and commissions. Catch me at conventions!",
   icons: {
     icon: [
